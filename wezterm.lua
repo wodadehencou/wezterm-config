@@ -75,10 +75,19 @@ end)
 local empty = ""
 
 return {
-	color_scheme = "Dracula+",
+	-- color_scheme = "Dracula+",
+	color_scheme = "IC_Orange_PPL",
+	-- color_scheme = "jubi",
+	color_scheme = "lovelace",
+	-- color_scheme = "Material",
+	-- color_scheme = "OceanicMaterial",
+	-- color_scheme = "Popping and Locking",
+	-- color_scheme = "Urple",
 	font = wezterm.font("VictorMono Nerd Font"),
-	font_size = 14.0,
+	-- font = wezterm.font("Iosevka Nerd Font"),
+	font_size = 16.0,
 	font_antialias = 'Subpixel',
+	harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
 	-- font_rules = {
 	-- 	{
 
@@ -108,9 +117,21 @@ return {
 		tab_bar = {},
 	},
 
+	-- window_background_image = "/Users/jiamu/Pictures/bing-wallpapers/BingWallpaper.jpg",
+	-- window_background_opacity = 0.3,
+
 	keys = {
 		{key="d", mods="SUPER", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
 		{key="d", mods="SUPER|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+		{key="LeftArrow", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Left"}},
+		{key="RightArrow", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Right"}},
+		{key="UpArrow", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Up"}},
+		{key="DownArrow", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Down"}},
+		{key="h", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Left"}},
+		{key="l", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Right"}},
+		{key="k", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Up"}},
+		{key="j", mods="SUPER", action=wezterm.action{ActivatePaneDirection="Down"}},
+		{key = "z", mods="SUPER", action="TogglePaneZoomState"},
 	}
 }
 
